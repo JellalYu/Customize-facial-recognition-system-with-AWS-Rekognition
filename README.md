@@ -1,5 +1,6 @@
 ## Scenario    
-Deep learning has been quietly applied to our daily lives, and image recognition is a good example. If users have the need of face recognition in practical applications, a simple way is to use AWS Rekognition services to build their own face database. For example, the technology could be used for corporate employee access or check-in systems. This Lab utilizes the API of AWS Rekognition Services to build an application architecture based on serverless computing.
+Deep learning has been quietly applied to our daily lives, and image recognition is a good example. If users have the need of face recognition in practical applications, a simple way is to use Amazon Rekognition services to build their own database. For example, this technology could be used for corporate employee access or check-in systems by utilizing Amazon Rekognition API to build an application architecture based on AWS serverless service.
+
 This lab uses the face images of Creative Commons (CC) to create user's own collection indexes. When the image import into the S3 database, it can trigger lambda to send back the face recognition result to the user through Amazon SNS.
 
 
