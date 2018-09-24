@@ -17,7 +17,7 @@ This lab uses the face images of Creative Commons (CC) to create user's own coll
 4. In Configure settings page, keep all the setting default and click **Next step**.
 5. Review the settings and click **Create environment**.
 
-#### Create S3 bucket
+### Create S3 bucket
 This part we use AWS CLI to build a bucket directly, which is used to place the faces pictures and trigger lambda events.
 
 1.    Open your cloud9 IDE and paste the following code in the console to install AWS CLI and set python environment:
@@ -114,7 +114,7 @@ for folder in face_folders:
 ```
 
 
-#### Integrate with serverless application
+### Integrate with serverless application
 1. On the Services menu, click **Lambda**.
 2. Click **Create function**.
 3. Choose **Author from scratch**.
@@ -181,7 +181,7 @@ for folder in face_folders:
 
 10. Click **Save**.
 
-###Set SNS notification
+### Set SNS notification
 1.    In AWS console, choose SNS (Simple Notification Service).
 2.    Click **Topics** at left navigation bar and click **Create new topic**.
 3.    Type your topic name and display name, then click **Create topic**.
@@ -193,11 +193,11 @@ for folder in face_folders:
 
 ![10.png](/img/10.png)
 
-###Test solution architecture
+### Test solution architecture
 1.    Go to google.com find the image like the face image you put into S3 bucket.
 2.    Check you can get the recognition result notification by email from Amazon SNS.
 
-###Clean 
+### Clean 
 After this tutorial, you should remove some resource to save account cost.
 1.    Cloud9 environment
 2.    Lambda function
