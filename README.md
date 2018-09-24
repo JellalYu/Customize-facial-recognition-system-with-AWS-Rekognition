@@ -199,9 +199,9 @@ for folder in face_folders:
 
 ## Clean Up
 After this tutorial, you should remove some resource to save account cost.
-1.    Cloud9 environment
-2.    Lambda function
-3.    S3 bucket
+* Cloud9 environment
+* Lambda function
+* S3 bucket
 
 ## Conclusion
 * Congratulations, through this Lab you can now: 
