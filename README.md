@@ -31,6 +31,9 @@ sudo python get-pip.py
 rm get-pip.py
 sudo python -m pip install boto3
 ```
+
+like this:
+
 ![3.png](/img/3.png)
 
 
