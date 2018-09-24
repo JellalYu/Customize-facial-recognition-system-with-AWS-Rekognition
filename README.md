@@ -20,7 +20,7 @@ This lab uses the face images of Creative Commons (CC) to create user's own coll
 #### Create S3 bucket
 This part we use AWS CLI to build a bucket directly, which is used to place the faces pictures and trigger lambda events.
 
-1.	Open your cloud9 IDE and paste the following code in console to install AWS CLI and set python environment:
+1.    Open your cloud9 IDE and paste the following code in the console to install AWS CLI and set python environment:
 ```
 #Install CLI
 sudo yum -y update 
@@ -38,25 +38,25 @@ like this:
 
 
 
-2.	Paste the following code to build an S3 bucket in N.Virginia region. Note that the bucket name here is unique.
+2.    Paste the following code to build an S3 bucket in N.Virginia region. Note that the bucket name here is unique.
 ```
 aws s3 mb s3://<your-own-bucket> --region us-east-1
 ```
 
-3.	Go to S3 service page. Put the sub-folders of **DataFace** from this GitHub into your S3 bucket.
+3.    Go to S3 service page. Put the sub-folders of **DataFace** from this GitHub into your S3 bucket.
 
 ![4.png](/img/4.png)
 
 ### Create collection and index
-This step is to create your own collection, which will be used to place the index of each face. The index is the feature of image.
+This step is to create your own collection, which will be used to place the index of each face. The index is the feature of the image.
 
-1.	Type the following code into Cloud9 environment. This is for creating Amazon Rekognition collection in N.Virginia region.
+1.    Type the following code into the Cloud9 environment. This is for creating Amazon Rekognition collection in N.Virginia region.
 
 ```
 aws rekognition create-collection --collection-id mylab_collection --region us-east-1 
 ```
 
-2.	Create indexes
+2.    Create indexes
 Paste the following python script into Cloud9 **New file** and save the name as “create_index.py”.
 ```
 import boto3
@@ -182,30 +182,30 @@ for folder in face_folders:
 10. Click **Save**.
 
 ###Set SNS notification
-1.	In AWS console, choose SNS (Simple Notification Service).
-2.	Click **Topics** at left navigation bar and click **Create new topic**.
-3.	Type your topic name and display name, then click **Create topic**.
-4.	Click into your SNS and create the subscription with your own email.
+1.    In AWS console, choose SNS (Simple Notification Service).
+2.    Click **Topics** at left navigation bar and click **Create new topic**.
+3.    Type your topic name and display name, then click **Create topic**.
+4.    Click into your SNS and create the subscription with your own email.
 
 ![9.png](/img/9.png)
 
-5.	Copy the ARN of SNS notification you just created and paste to your lambda function.
+5.    Copy the ARN of SNS notification you just created and paste to your lambda function.
 
 ![10.png](/img/10.png)
 
 ###Test solution architecture
-1.	Go to google.com find the image like the face image you put into S3 bucket.
-2.	Check you can get the recognition result notification by email from Amazon SNS.
+1.    Go to google.com find the image like the face image you put into S3 bucket.
+2.    Check you can get the recognition result notification by email from Amazon SNS.
 
 ###Clean 
 After this tutorial, you should remove some resource to save account cost.
-1.	Cloud9 environment
-2.	Lambda function
-3.	S3 bucket
+1.    Cloud9 environment
+2.    Lambda function
+3.    S3 bucket
 
 ## Conclusion
 * Congratulations, through this Lab you can now: 
-1. Create your own rekognition collection with specific faces index.
+1. Create your own Rekognition collection with specific faces index.
 2. Use serverless to make an event trigger S3 and Rekognition applications.
 3. Use cloud9 to build service environment.
 
