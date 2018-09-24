@@ -39,12 +39,11 @@ like this:
 
 
 2.	Paste the following code to build an S3 bucket in N.Virginia region. Note that the bucket name here is unique.
-3.	
 ```
 aws s3 mb s3://<your-own-bucket> --region us-east-1
 ```
 
-4.	Go to S3 service page. Put the sub-folders of **DataFace** from this GitHub into your S3 bucket.
+3.	Go to S3 service page. Put the sub-folders of **DataFace** from this GitHub into your S3 bucket.
 
 ![4.png](/img/4.png)
 
@@ -172,7 +171,7 @@ for folder in face_folders:
 
 ![6.png](/img/6.png)
 
-8. Paste the python script in this GitHub repository to **Function code**.
+8. Paste the python script in this GitHub repository to **Function code**. You should change the S3 bucket name and SNS ARN before you test.
 
 ![7.png](/img/7.png)
 
@@ -207,7 +206,8 @@ After this tutorial, you should remove some resource to save account cost.
 ## Conclusion
 * Congratulations, through this Lab you can now: 
 1. Create your own rekognition collection with specific faces index.
-2. Using serverless to make an event trigger S3 and Rekognition applications.
+2. Use serverless to make an event trigger S3 and Rekognition applications.
+3. Use cloud9 to build service environment.
 
 
 ## Reference
