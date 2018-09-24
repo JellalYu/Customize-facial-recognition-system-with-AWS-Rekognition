@@ -197,7 +197,7 @@ for folder in face_folders:
 1.    Go to google.com find the image like the face image you put into S3 bucket.
 2.    Check you can get the recognition result notification by email from Amazon SNS.
 
-### Clean 
+## Clean Up
 After this tutorial, you should remove some resource to save account cost.
 1.    Cloud9 environment
 2.    Lambda function
