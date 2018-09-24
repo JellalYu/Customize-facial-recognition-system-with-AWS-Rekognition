@@ -57,6 +57,7 @@ aws rekognition create-collection --collection-id mylab_collection --region us-e
 ```
 
 2.    Create indexes
+
 Paste the following python script into Cloud9 **New file** and save the name as “create_index.py”.
 ```
 import boto3
