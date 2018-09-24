@@ -166,20 +166,20 @@ for folder in face_folders:
     ]
 }
 ```
-9. Click **Allow**.
-10. Go back to rek_lambda function setting page, from **Designer** section choose and drag S3 into **trigger list from the list on the left** column.
+8. Click **Allow**.
+9. Go back to rek_lambda function setting page, from **Designer** section choose and drag S3 into **trigger list from the list on the left** column.
 
 ![6.png](/img/6.png)
 
-8. Paste the python script in this GitHub repository to **Function code**. You should change the S3 bucket name and SNS ARN before you test.
+10. Paste the python script in this GitHub repository to **Function code**. You should change the S3 bucket name and SNS ARN before you test.
 
 ![7.png](/img/7.png)
 
-9. In **Basic settings** set **Timeout** to 5 min.
+11. In **Basic settings** set **Timeout** to 5 min.
 
 ![8.png](/img/8.png)
 
-10. Click **Save**.
+12. Click **Save**.
 
 ### Set SNS notification
 1.    In AWS console, choose SNS (Simple Notification Service).
