@@ -9,7 +9,6 @@ This lab uses the face images of Creative Commons (CC) to create user's own coll
 ## Prerequisites
 1. Sign-in an AWS account, and make sure you have select **N.Virginia** region.
 
----
 ## Lab Tutorial
 
 ### Create Cloud9 IDE Environment
