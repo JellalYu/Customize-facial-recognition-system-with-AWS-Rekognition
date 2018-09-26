@@ -12,8 +12,8 @@ This lab uses the face images of Creative Commons (CC) to create user's own coll
 ### Create Cloud9 IDE Environment
 
 1. In AWS console, open Cloud9.
-2. In your environments page, type **Create environment**.
-3. In name environment page, type your own cloud9 environment name and description then type **Next step**.
+2. In your environments page, click **Create environment**.
+3. In name environment page, type your own cloud9 environment name and description then click **Next step**.
 ![2.png](/img/2.png)
 4. In Configure settings page, keep all the setting default and click **Next step**.
 5. Review the settings and click **Create environment**.
@@ -39,7 +39,8 @@ like this:
 
 
 
-2.    Paste the following code to build an S3 bucket in N.Virginia region. Note that the bucket name here is unique.
+2.    Type the following script to build an S3 bucket in N.Virginia region. 
+> Note that the bucket name here is unique.
 ```
 aws s3 mb s3://<your-own-bucket> --region us-east-1
 ```
@@ -51,7 +52,7 @@ aws s3 mb s3://<your-own-bucket> --region us-east-1
 ### Create collection and index
 This step is to create your own collection, which will be used to place the index of each face. The index is the feature of the image.
 
-1.    Type the following code into the Cloud9 environment. This is for creating Amazon Rekognition collection in N.Virginia region.
+1.    Type the following script into the Cloud9 environment. This is for creating Amazon Rekognition collection in N.Virginia region.
 
 ```
 aws rekognition create-collection --collection-id mylab_collection --region us-east-1 
@@ -123,7 +124,7 @@ for folder in face_folders:
 4. Enter function Name **rek_lambda**.
 5. Select **python 3.6** in Runtime blank.
 6. Select **Choose an existing role** in **Role** blank and choose **myRek_role** as Existing role. If the role is not existing, choose **create a new role**.
-7. If you don’t have the role, type the role name as **myRek_role** and paste the following code in policy document:
+7. If you don’t have the role, click the role name as **myRek_role** and paste the following code in policy document:
 
 ![5.png](/img/5.png)
 
@@ -147,15 +148,6 @@ for folder in face_folders:
             ],
             "Resource": [
                 "arn:aws:s3:::bucket-name/*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "dynamodb:PutItem"
-            ],
-            "Resource": [
-                "arn:aws:dynamodb:aws-region:account-id:table/family_collection"
             ]
         },
         {
