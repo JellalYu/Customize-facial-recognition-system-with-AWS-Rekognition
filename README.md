@@ -206,4 +206,5 @@ After this tutorial, you should remove some resource to save account cost.
 
 ## Reference
 * [**Build Your Own Face Recognition Service Using Amazon Rekognition**](https://aws.amazon.com/tw/blogs/machine-learning/build-your-own-face-recognition-service-using-amazon-rekognition/)
+* [**Subscribe to an Amazon SNS Topic**](https://docs.aws.amazon.com/sns/latest/dg/SubscribeTopic.html)
 
