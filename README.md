@@ -22,7 +22,8 @@ This lab uses the face images of Creative Commons (CC) to create user's own coll
 This part we use AWS CLI to build a bucket directly, which is used to place the faces pictures and trigger lambda events.
 
 1.    Open your cloud9 IDE and paste the following code in the console to install AWS CLI and set python environment:
-```
+
+```bash
 #Install CLI
 sudo yum -y update 
 sudo yum -y install aws-cli
@@ -41,7 +42,7 @@ like this:
 
 2.    Type the following script to build an S3 bucket in N.Virginia region. 
 > Note that the bucket name here is unique.
-```
+```bash
 aws s3 mb s3://<your-own-bucket> --region us-east-1
 ```
 
@@ -54,14 +55,15 @@ This step is to create your own collection, which will be used to place the inde
 
 1.    Type the following script into the Cloud9 environment. This is for creating Amazon Rekognition collection in N.Virginia region.
 
-```
+```bash
 aws rekognition create-collection --collection-id mylab_collection --region us-east-1 
 ```
 
 2.    Create indexes
 
 Paste the following python script into Cloud9 **New file** and save the name as “create_index.py”.
-```
+
+```python
 import boto3
 s3 = boto3.resource('s3')
 rekognition = boto3.client('rekognition')
@@ -128,7 +130,7 @@ for folder in face_folders:
 
 ![5.png](/img/5.png)
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
